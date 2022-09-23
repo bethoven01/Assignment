@@ -1,41 +1,34 @@
-# Interview Exercise for Agile QA role
+# QA Task
 
-Please note while taking this test, do not mention 90 Percent of Everything or 90poe anywhere on the code or repository name.
+Review the user story and prepare a list of questions/ assumptions.
+- Does string contain alpha numeric characters and numbers, special characters?
+- What would be the expected result if no argument is passed?
+- What is the upper limit on length of an individual string?
+- What is the upper limit on length of a string array?
+- If length of string array > 4, which 4 strings should be added?
+- Does localization need to be handled?
 
-Clone this repo in your private git space. Once done, please add github username: shilpa-sethi as a collaborator/ reviewer.
-While submitting please ensure to add a README explaining how to run the test and all related info.
+Review the code and provide feedback/ improvements. 
+- While user story mentions to add up to 4 strings, program throws an error if number of arguments are >= 4, Should be > 4 only.
+- There is no code which concatenates string
+- No comments were added explaining fuction's behaviour
+- Variables, declared in Main method, should be declared globally
 
-## Testing Task
-Product Owner wants a feature as described below. The developer has added the code and share with you as a QA for review/ testing.
+Extend the program to return the number of consonants for each string array passed.
+-   Please check code "Assignment/agile_qa_test/agile_qa_interview_exercise_1ca32ca/src/main/java/com/exercise/VowelCount.java"
 
-### Feature
+Use BDD/ Cucumber to add test cases to test the program for both vowels and consonants.
+-   Please check feature file "Assignment/agile_qa_test/agile_qa_interview_exercise_1ca32ca/src/test/java/VowelConsonantsCount.feature"
+-   Please check step definition file "Assignment/agile_qa_test/agile_qa_interview_exercise_1ca32ca/src/main/java/stepDefs/VowelStepDef.java"
 
-As a user I want to be able to add a list of strings. 
-I want to see the number of vowels in each of the strings that I have entered.
+Report any bugs you find. Include as much information as necessary and add the feedback as a file to the repo along with the Cucumber Test Report.
+-  Error message is displayed if 4 arguments are passed to main method
+    -   As per user story, User should be able to add up to 4 strings at once. But when 4 strings are passed as an arguments, error message is displayed : "Extra arguments passed."
+-   Strings cannot be concatenated even if less than 4 strings are passed as an arguments
+    -   As per user story, User should be able to add up to 4 strings. But there is no method provided in the developer's code.
 
-### Acceptance Criteria
+How to run tests:
+-   Open feature file "Assignment/agile_qa_test/agile_qa_interview_exercise_1ca32ca/src/test/java/VowelConsonantsCount.feature".
+-   Right click on feature file and Select option : Run As -> Cucumber feature.
 
-1. I should see the number of vowels and consonant for each string in the order they are keyed in.
-2. I should be able to add up to 4 strings at once.
-
-### QA Task
-
-1. Review the user story and prepare a list of questions/ assumptions.
-2. Review the code and provide feedback/ improvements. 
-3. Extend the program to return the number of consonants for each string array passed.
-4. Use BDD/ Cucumber to add test cases to test the program for both vowels and consonants.
-5. Report any bugs you find. Include as much information as necessary and add the feedback as a file to the repo along with the Cucumber Test Report.
-
-Bonus points if you can add failing test cases for the bugs you find. 
-
-## Evaluation Points
-
-1. Use of Git.
-2. Use of BDD/TDD/Cucumber.
-3. Code Review skills.
-4. Coding skills.
-5. Test Case Coverage.
-
-## Time limits
-
-There are no hard time limits. We suggest not to spend more than ~2 hours.
+All test cases are written in feature file which refers step definitions file to call method which performs actions/operations from another java classes.
